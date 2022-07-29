@@ -38,9 +38,7 @@ class RestaurantsAdapter(val context: Context, val restaurants: List<YelpRestaur
 
         fun bind(restaurant: YelpRestaurant) {
             itemView.findViewById<TextView1>(R.id.tvName).text = restaurant.name
-            // TODO: this might go wrong!!! check it!!! 
             itemView.findViewById<RatingBar>(R.id.ratingBar).rating = restaurant.rating.toFloat()
-            // TODO: this might go wrong!!! check it!!!
             itemView.findViewById<TextView1>(R.id.tvNumReviews).text = "${restaurant.numReviews} Reviews"
             itemView.findViewById<TextView1>(R.id.tvAddress).text = restaurant.location.address
             itemView.findViewById<TextView1>(R.id.tvCategory).text = restaurant.categories[0].title
